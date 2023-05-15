@@ -2,7 +2,8 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-sm">
       <a class="navbar-brand" href="<?= base_url('/') ?>">
-        <img src="imagenes/Alumno_crud.svg" alt="Logo" height="30" class="d-inline-block align-text-top">
+        <img src="<?= base_url('imagenes/Alumno_crud.svg') ?>" alt="Logo" height="30" class="d-inline-block align-text-top">
+        CRUD Alumnos
       </a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
