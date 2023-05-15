@@ -5,65 +5,59 @@ CRUD Alumnos
 <?= $this->endSection() ?>
 
 <?= $this->Section('content') ?>
-<main class="container-sm">
-  <section class="d-flex w-50">
-    <form action="<?= base_url('registrarAlumno') ?>" method="POST">
-      <h1>Registro de Estudiantes</h1>
-      <h3>Datos Personales</h3>
-
-      <div class="row">
-        <!-- Section name -->
-        <div class="col-6">
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Nombre(s)" name="nombres">
-            <label for="floatingInput">Nombre(s)</label>
-          </div>
-        </div>
-
-        <!-- Section Surname -->
-        <div class="col-6">
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Apellido(s)" name="apellidos">
-            <label for="floatingInput">Apellido(s)</label>
-          </div>
-        </div>
+<h1 class="h1 my-4">Registro de Alumnos</h1>
+<form action="#" method="get">
+  <div class="row mb-3">
+    <div class="col-lg-3">
+      <div class="form-floating">
+        <input type="text" class="form-control" id="nameInput" placeholder="Nombre(s)" name="nombre" />
+        <label for="nameInput">Nombres(s)</label>
       </div>
+    </div>
 
-      <!-- Section Gender -->
-
-      <div class="row">
-        <div class="col-7">
-          <div class="form-floating">
-            <select class="form-select" id="floatingSelect" aria-label="Selector" name="genero">
-              <option value="Femenino">Femenino</option>
-              <option value="Masculino">Masculino</option>
-            </select>
-            <label for="floatingSelect">Género</label>
-          </div>
-        </div>
-
-        <div class="col-5">
-          <div class="form-floating mb-3">
-            <input type="number" class="form-control" id="floatingInput" placeholder="Edad" name="edad">
-            <label for="floatingInput">Edad</label>
-          </div>
-        </div>
+    <div class="col-lg-3">
+      <div class="form-floating">
+        <input type="text" class="form-control" id="surnameInput" placeholder="Apellido(s)" name="apellido" />
+        <label for="surnameInput">Apellido(s)</label>
       </div>
+    </div>
+  </div>
 
-      <div class="row">
-        <div class="co-12">
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="Dirección" id="floatingTextarea2" style="height: 100px" name="direccion"></textarea>
-            <label for="floatingTextarea2">Dirección</label>
-          </div>
-        </div>
-
+  <div class="row mb-3">
+    <div class="col-lg-2">
+      <div class="form-floating">
+        <select class="form-select" id="selectGender" aria-label="Select Gender" name="genero">
+          <option value="Femenino">Mujer</option>
+          <option value="Masculino">Hombre</option>
+        </select>
+        <label for="selectGender">Género</label>
       </div>
+    </div>
 
-      <button type="submit" class="btn btn-success">Registar</button>
+    <div class="col-lg-1">
+      <div class="form-floating">
+        <input type="number" class="form-control" id="ageInput" placeholder="Edad" name="edad" />
+        <label for="ageInput">Edad</label>
+      </div>
+    </div>
+  </div>
 
-    </form>
-  </section>
+  <div class="row mb-3">
+    <div class="col-lg-6">
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Domicilio" id="addressInput" style="height: 100px" name="domicilio"></textarea>
+        <label for="addressInput">Domicilio</label>
+      </div>
+    </div>
+  </div>
 
-</main>
+  <div class="d-grid col-2">
+    <button type="submit" class="btn btn-success">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+        <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z" />
+      </svg>
+      Registrar alumno
+    </button>
+  </div>
+</form>
 <?= $this->endSection() ?>
