@@ -6,7 +6,7 @@ CRUD Alumnos
 
 <?= $this->Section('content') ?>
 <h1 class="h1 my-4">Registro de Alumnos</h1>
-<form action="#" method="get">
+<form action="<?= base_url('registrarAlumno') ?>" method="post">
   <div class="row mb-3">
     <div class="col-lg-3">
       <div class="form-floating">

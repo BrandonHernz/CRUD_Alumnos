@@ -29,5 +29,6 @@ class AlumnoController extends Controller
 
     $alumno = new AlumnoModel();
     $alumno->save($datosForm);
+    return view('alumnos');
   }
 }
