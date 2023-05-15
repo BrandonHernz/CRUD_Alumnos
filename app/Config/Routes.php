@@ -33,6 +33,8 @@ $routes->get('/', 'AlumnoController::home');
 $routes->get('Alumnos', 'AlumnoController::tableStudents');
 $routes->post('registrarAlumno', 'AlumnoController::saveStudent');
 $routes->get('eliminarAlumno/(:num)', 'AlumnoController::deleteStudent/$1');
+$routes->get('obtenerAlumno/(:num)', 'AlumnoController::getStudent/$1');
+$routes->post('actualizarAlumno/(:num)', 'AlumnoController::updateStudent/$1');
 
 /*
  * --------------------------------------------------------------------

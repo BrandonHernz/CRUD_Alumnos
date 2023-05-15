@@ -1,7 +1,7 @@
 <?= $this->extend('layout/main.php') ?>
 
 <?= $this->Section('title') ?>
-CRUD Alumnos
+CRUD Alumnos | Tabla de Registros
 <?= $this->endSection() ?>
 
 <?= $this->Section('content') ?>
@@ -29,8 +29,8 @@ CRUD Alumnos
           <td><?= $alumno['edad'] ?></td>
           <td><?= $alumno['direccion'] ?></td>
           <td>
-            <a href="#" class="btn btn-primary btn-sm">Editar</a>
-            <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+            <a href="<?= base_url() . 'obtenerAlumno/' . $alumno['id_alumno'] ?>" class="btn btn-primary btn-sm">Editar</a>
+            <a href="<?= base_url() . 'eliminarAlumno/' . $alumno['id_alumno'] ?>" class="btn btn-danger btn-sm">Eliminar</a>
           </td>
         </tr>
       <?php endforeach; ?>
