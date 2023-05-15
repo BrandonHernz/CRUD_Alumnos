@@ -15,24 +15,26 @@ CRUD Alumnos
         <th scope="col">Apellido(s)</th>
         <th scope="col">Género</th>
         <th scope="col">Edad</th>
-        <th scope="col">Estado</th>
+        <th scope="col">Dirección</th>
         <th scope="col">Acciones</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">ID</th>
-        <td>DATA</td>
-        <td>DATA</td>
-        <td>DATA</td>
-        <td>DATA</td>
-        <td>DATA</td>
-        <td>DATA</td>
-        <td>
-      <a href="#" class="btn btn-primary btn-sm">Editar</a>
-      <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
-        </td>
-      </tr>
+      <?php foreach ($alumnos as $alumno) : ?>
+        <tr>
+          <td><?= $alumno['id_alumno'] ?></td>
+          <td><?= $alumno['nombres'] ?></td>
+          <td><?= $alumno['apellidos'] ?></td>
+          <td><?= $alumno['genero'] ?></td>
+          <td><?= $alumno['edad'] ?></td>
+          <td><?= $alumno['direccion'] ?></td>
+          <td>
+            <a href="#" class="btn btn-primary btn-sm">Editar</a>
+            <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
+          </td>
+        </tr>
+      <?php endforeach; ?>
+
     </tbody>
   </table>
 </main>

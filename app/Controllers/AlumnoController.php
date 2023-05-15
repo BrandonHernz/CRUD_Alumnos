@@ -14,7 +14,9 @@ class AlumnoController extends Controller
 
   public function tableStudents()
   {
-    return view('alumnos');
+    $model = new AlumnoModel();
+    $data['alumnos'] = $model->findAll();
+    return view('alumnos', $data);
   }
 
   public function saveStudent()
@@ -29,6 +31,6 @@ class AlumnoController extends Controller
 
     $alumno = new AlumnoModel();
     $alumno->save($datosForm);
-    return view('alumnos');
+    return redirect()->route('Alumnos');
   }
 }
