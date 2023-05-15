@@ -6,9 +6,9 @@ use CodeIgniter\Model;
 
 class AlumnoModel extends Model
 {
-  protected $table      = 'estudiante';
+  protected $table      = 'alumnos';
   // Uncomment below if you want add primary key
-  protected $primaryKey = 'id_estudiante';
+  protected $primaryKey = 'id_alumnos';
 
   protected $allowedFields = ['nombres', 'apellidos', 'edad', 'genero', 'direccion'];
 }
