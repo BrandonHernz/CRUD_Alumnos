@@ -8,7 +8,7 @@ class AlumnoModel extends Model
 {
   protected $table      = 'alumnos';
   // Uncomment below if you want add primary key
-  protected $primaryKey = 'id_alumnos';
+  protected $primaryKey = 'id_alumno';
 
   protected $allowedFields = ['nombres', 'apellidos', 'edad', 'genero', 'direccion'];
 }
