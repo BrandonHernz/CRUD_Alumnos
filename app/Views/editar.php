@@ -37,8 +37,13 @@ CRUD Alumnos | Editar
     <div class="col-lg-2">
       <div class="form-floating">
         <select class="form-select" id="selectGender" aria-label="Select Gender" name="genero">
-          <option value="Femenino">Mujer</option>
-          <option value="Masculino">Hombre</option>
+          <?php if ($alumno['genero'] == 'Masculino') : ?>
+            <option selected value="Masculino">Hombre</option>
+            <option value="Femenino">Mujer</option>
+          <?php else : ?>
+            <option selected value="Femenino">Mujer</option>
+            <option value="Masculino">Hombre</option>
+          <?php endif; ?>
         </select>
         <label for="selectGender">Género</label>
       </div>
