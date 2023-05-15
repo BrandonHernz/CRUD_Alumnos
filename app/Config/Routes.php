@@ -32,6 +32,7 @@ $routes->set404Override();
 $routes->get('/', 'AlumnoController::home');
 $routes->get('Alumnos', 'AlumnoController::tableStudents');
 $routes->post('registrarAlumno', 'AlumnoController::saveStudent');
+$routes->get('eliminarAlumno/(:num)', 'AlumnoController::deleteStudent/$1');
 
 /*
  * --------------------------------------------------------------------
